@@ -18,7 +18,9 @@ def manual_append(list_one, element):
     one coherent list of all elements combined
 
     '''
-    pass
+    return list_one + [element]
+
+# print(manual_append([1, 2, 3, 4], 10))
 
 def manual_remove(list_one, indexToRemove):
     '''
@@ -31,7 +33,15 @@ def manual_remove(list_one, indexToRemove):
         outputList: returns a list of values with the index removed
         eg: if list_one is [1,2,3] and index is 1. Your function would remove 2 and return [1,3]
     '''
-    pass
+    outputList = []
+
+    for currentIndex in range(len(list_one)):
+        if(currentIndex != indexToRemove):
+            outputList = manual_append(outputList,list_one(currentIndex))
+
+    return outputList
+
+print(manual_remove([1, 2, 3], 0))
 
 # Doing things with list data structures
 
@@ -48,8 +58,13 @@ def compare_lists(list_one, list_two):
         output: list of items that were different in the second list
         eg: If you have [1,2,3,4] as list_one and [1,5,3,7] in the second list, you would return [5,7].
     '''
+    output = []
     
-    pass
+    for item in range(len(list_one)):
+        if(list_one[item] != list_two[item]):
+            output = manual_append(output, list_two[item])
+
+    return output
 
 def factorial_for(n):
     '''
@@ -67,8 +82,8 @@ def factorial_for(n):
 if __name__ == '__main__':
     # TODO:
     # implement testing
-    #print(manual_append([1, 2, 3, 4, 5], 2)) # output should be true, 1
-    #print(manual_remove([1, 2, 3], 0))
+    # print(manual_append([1, 2, 3, 4, 5], 2)) # output should be true, 1
+    # print(manual_remove([1, 2, 3], 0))
     #print(compare_lists([1,2,3,4],[1,5,3,7]))
     
     # Call the function and pass a value for n
