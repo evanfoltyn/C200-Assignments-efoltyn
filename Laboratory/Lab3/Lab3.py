@@ -20,8 +20,6 @@ def manual_append(list_one, element):
     '''
     return list_one + [element]
 
-# print(manual_append([1, 2, 3, 4], 10))
-
 def manual_remove(list_one, indexToRemove):
     '''
     Give manual_remove a list of elements and choose a specific index to remove by using a for loop.
@@ -37,11 +35,9 @@ def manual_remove(list_one, indexToRemove):
 
     for currentIndex in range(len(list_one)):
         if(currentIndex != indexToRemove):
-            outputList = manual_append(outputList,list_one(currentIndex))
+            outputList = manual_append(outputList,list_one[currentIndex])
 
     return outputList
-
-print(manual_remove([1, 2, 3], 0))
 
 # Doing things with list data structures
 
@@ -77,23 +73,24 @@ def factorial(n):
     the calculated factorial of the input value 
     '''
     result=1
-    for i in range(1, n+1)
-        result *=1
-
+    for i in range(1, n+1):
+        result *= i
+    
     return result
+
 
 
 if __name__ == '__main__':
     # TODO:
     # implement testing
-    # print(manual_append([1, 2, 3, 4, 5], 2)) # output should be true, 1
-    # print(manual_remove([1, 2, 3], 0))
-    # print(compare_lists([1,2,3,4],[1,5,3,7]))
+    print(manual_append([1, 2, 3, 4, 5], 2)) # output should be true, 1
+    print(manual_remove([1, 2, 3], 0))
+    print(compare_lists([1,2,3,4],[1,5,3,7]))
     
     # Call the function and pass a value for n
-    # x = 5
-    # result = factorial(x)
-    # print("The factorial of", x, "is", result)
+    x = 5
+    result = factorial(x)
+    print("The factorial of", x, "is", result)
     
 
     pass
