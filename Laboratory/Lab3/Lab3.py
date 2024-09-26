@@ -66,7 +66,7 @@ def compare_lists(list_one, list_two):
 
     return output
 
-def factorial_for(n):
+def factorial(n):
     '''
     given a number calculate the factorial value using a for loop
 
@@ -76,7 +76,11 @@ def factorial_for(n):
     output:
     the calculated factorial of the input value 
     '''
-    pass
+    result=1
+    for i in range(1, n+1)
+        result *=1
+
+    return result
 
 
 if __name__ == '__main__':
@@ -84,12 +88,12 @@ if __name__ == '__main__':
     # implement testing
     # print(manual_append([1, 2, 3, 4, 5], 2)) # output should be true, 1
     # print(manual_remove([1, 2, 3], 0))
-    #print(compare_lists([1,2,3,4],[1,5,3,7]))
+    # print(compare_lists([1,2,3,4],[1,5,3,7]))
     
     # Call the function and pass a value for n
-    #x = 5
-    #result = factorial(x)
-    #print("The factorial of", x, "is", result)
+    # x = 5
+    # result = factorial(x)
+    # print("The factorial of", x, "is", result)
     
 
     pass
